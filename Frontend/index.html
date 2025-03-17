@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Libros</title>
+
+</head>
+<body>
+    <h2>REGISTRAR LOS LIBROS</h2>
+    <form id="formLibro">
+        <input type="text" id="titulo" placeholder="Titulo" required>
+        <input type="text" id="autor" placeholder="Autor" required>
+        <input type="text" id="isbn" placeholder="ISBN" required>
+        <input type="text" id="fechaPublicacion" required>
+        <input type="text" id="genero" placeholder="Género" required>
+        <button type="submit">REGISTRAR LIBRO</button>
+    </form>
+    <p id="mensaje"></p>
+    <script>
+        document.getElementById("formLibro").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const libro = {
+                titulo: document.getElementById("titulo").value.trim(),
+                autor: document.getElementById("autor").value.trim(),
+                isbn: document.getElementById("isbn").value.trim(),
+                fechaPublicacion: document.getElementById("fechaPublicacion").value,
+                genero: document.getElementById("genero").value.trim().toUpperCase().replace(" ", "_") // Ajuste del formato
+            };
+
+            console.log("Enviando libro:", libro); // Depuración en consola
+
+            try {
+                const response = await fetch("http://localhost:8080/libros/registrar", {
+                method: "POST", // Asegúrate de que sea POST
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(libro)
+            });
+
+                if (!response.ok) {
+                    throw new Error(`Error en la solicitud: ${response.status}`);
+                }
+
+                const data = await response.json();
+                console.log("Respuesta del servidor:", data);
+                document.getElementById("mensaje").textContent = data.mensaje || "Libro registrado con éxito";
+                document.getElementById("mensaje").style.color = "green";
+            } catch (error) {
+                console.error("Error:", error);
+                document.getElementById("mensaje").textContent = "Error al registrar el libro";
+                document.getElementById("mensaje").style.color = "red";
+            }
+        });
+    </script>
+
+</body>
+</html>
