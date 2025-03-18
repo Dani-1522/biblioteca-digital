@@ -1,18 +1,15 @@
 package com.example.biblioteca.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.sql.Timestamp;
 
 
 @Entity
 @Table(name = "usuarios")
-@Getter
-@Setter
+@Builder
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Usuarios {
@@ -24,10 +21,10 @@ public class Usuarios {
     private String nombre;
 
     @Column(nullable = false)
-    private String correo;
+    private String email;
 
-    @Column(nullable = false)
-    private String contraseña;
+    @Column(name = "contraseña", nullable = false)
+    private String password;
 
     @Enumerated(EnumType.STRING)
     private Rol rol;
@@ -35,19 +32,11 @@ public class Usuarios {
     @Column(nullable = false)
     private Timestamp fecha_registro ;
 
-    public String getCorreo() {
-        return correo;
+    public void setId_usuario(Long id_usuario) {
+        this.id_usuario = id_usuario;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getPassword() {
+        return password;
     }
 }

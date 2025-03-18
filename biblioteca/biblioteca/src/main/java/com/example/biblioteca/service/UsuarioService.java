@@ -11,23 +11,37 @@ import java.util.Optional;
 @Service
 public class UsuarioService {
 
+
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    public Usuarios registrarUsuario(Usuarios usuario) {
-        if (usuarioRepository.existsByCorreo(usuario.getCorreo())){
-            throw new RuntimeException("El correo ya existe");
-        }
-        return usuarioRepository.save(usuario);
-    }
-    public Optional<Usuarios> buscarUsuarioPorCorreo(String correo) {
-        return usuarioRepository.findByCorreo(correo);
-    }
-    public Optional<Usuarios> buscarUsuarioPorNombre(String nombre) {
-        return usuarioRepository.findByNombre(nombre);
-    }
-    public List<Usuarios> listarUsuarios() {
+    public List<Usuarios> obtenerTodos() {
         return usuarioRepository.findAll();
     }
 
+    public Optional<Usuarios> obtenerPorId(Long id) {
+        return usuarioRepository.findById(id);
+    }
+
+    public Usuarios guardarUsuario(Usuarios usuario) {
+        return usuarioRepository.save(usuario);
+    }
+
+    public void eliminarUsuario(Long id) {
+        usuarioRepository.deleteById(id);
+    }
+
+    public List<Usuarios> buscarPorNombre(String nombre) {
+        return usuarioRepository.findByNombreContainingIgnoreCase(nombre);
+    }
+
+    public Optional<Usuarios> buscarPorCorreo(String correo) {
+        return usuarioRepository.findByEmail(correo);
+    }
+
+    public String recuperarContraseña(String correo) {
+        Optional<Usuarios> usuario = usuarioRepository.findByEmail(correo);
+        return usuario.map(value -> "Tu contraseña es: " + value.getPassword())
+                .orElse("Correo no encontrado");
+    }
 }

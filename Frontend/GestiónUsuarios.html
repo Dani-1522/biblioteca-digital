@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <script defer src="usuarios.js"></script>
+</head>
+<body>
+    <h1>Gestión de Usuarios</h1>
+
+    <h2>Registrar Usuario</h2>
+    <form id="usuarioForm">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="email" id="correo" placeholder="Correo" required>
+        <input type="password" id="contraseña" placeholder="Contraseña" required>
+        <select id="rol">
+            <option value="LECTOR">Lector</option>
+            <option value="ADMIN">Administrador</option>
+        </select>
+        <button type="submit">Registrar</button>
+    </form>
+
+    <h2>Buscar Usuario</h2>
+    <input type="text" id="buscarNombre" placeholder="Buscar por nombre">
+    <button onclick="buscarUsuarios()">Buscar</button>
+
+    <h2>Lista de Usuarios</h2>
+    <ul id="listaUsuarios"></ul>
+</body>
+</html>

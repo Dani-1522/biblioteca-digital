@@ -2,8 +2,97 @@
 <dataSource name="biblioteca@localhost">
   <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.53">
     <root id="1">
+      <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
       <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <Grants>|root||root|localhost|ALTER|G
+|root||root|localhost|ALTER ROUTINE|G
+|root||root|localhost|APPLICATION_PASSWORD_ADMIN|G
+|root||mysql.infoschema|localhost|AUDIT_ABORT_EXEMPT|G
+|root||mysql.session|localhost|AUDIT_ABORT_EXEMPT|G
+|root||mysql.sys|localhost|AUDIT_ABORT_EXEMPT|G
+|root||root|localhost|AUDIT_ABORT_EXEMPT|G
+|root||root|localhost|AUDIT_ADMIN|G
+|root||mysql.session|localhost|AUTHENTICATION_POLICY_ADMIN|G
+|root||root|localhost|AUTHENTICATION_POLICY_ADMIN|G
+|root||mysql.session|localhost|BACKUP_ADMIN|G
+|root||root|localhost|BACKUP_ADMIN|G
+|root||root|localhost|BINLOG_ADMIN|G
+|root||root|localhost|BINLOG_ENCRYPTION_ADMIN|G
+|root||mysql.session|localhost|CLONE_ADMIN|G
+|root||root|localhost|CLONE_ADMIN|G
+|root||mysql.session|localhost|CONNECTION_ADMIN|G
+|root||root|localhost|CONNECTION_ADMIN|G
+|root||root|localhost|CREATE|G
+|root||root|localhost|CREATE ROLE|G
+|root||root|localhost|CREATE ROUTINE|G
+|root||root|localhost|CREATE TABLESPACE|G
+|root||root|localhost|CREATE TEMPORARY TABLES|G
+|root||root|localhost|CREATE USER|G
+|root||root|localhost|CREATE VIEW|G
+|root||root|localhost|DELETE|G
+|root||root|localhost|DROP|G
+|root||root|localhost|DROP ROLE|G
+|root||root|localhost|ENCRYPTION_KEY_ADMIN|G
+|root||root|localhost|EVENT|G
+|root||root|localhost|EXECUTE|G
+|root||root|localhost|FILE|G
+|root||mysql.infoschema|localhost|FIREWALL_EXEMPT|G
+|root||mysql.session|localhost|FIREWALL_EXEMPT|G
+|root||mysql.sys|localhost|FIREWALL_EXEMPT|G
+|root||root|localhost|FIREWALL_EXEMPT|G
+|root||root|localhost|FLUSH_OPTIMIZER_COSTS|G
+|root||root|localhost|FLUSH_STATUS|G
+|root||root|localhost|FLUSH_TABLES|G
+|root||root|localhost|FLUSH_USER_RESOURCES|G
+|root||root|localhost|GROUP_REPLICATION_ADMIN|G
+|root||root|localhost|GROUP_REPLICATION_STREAM|G
+|root||root|localhost|INDEX|G
+|root||root|localhost|INNODB_REDO_LOG_ARCHIVE|G
+|root||root|localhost|INNODB_REDO_LOG_ENABLE|G
+|root||root|localhost|INSERT|G
+|root||root|localhost|LOCK TABLES|G
+|root||root|localhost|PASSWORDLESS_USER_ADMIN|G
+|root||mysql.session|localhost|PERSIST_RO_VARIABLES_ADMIN|G
+|root||root|localhost|PERSIST_RO_VARIABLES_ADMIN|G
+|root||root|localhost|PROCESS|G
+|root||root|localhost|REFERENCES|G
+|root||root|localhost|RELOAD|G
+|root||root|localhost|REPLICATION CLIENT|G
+|root||root|localhost|REPLICATION SLAVE|G
+|root||root|localhost|REPLICATION_APPLIER|G
+|root||root|localhost|REPLICATION_SLAVE_ADMIN|G
+|root||root|localhost|RESOURCE_GROUP_ADMIN|G
+|root||root|localhost|RESOURCE_GROUP_USER|G
+|root||root|localhost|ROLE_ADMIN|G
+|root||mysql.infoschema|localhost|SELECT|G
+|root||root|localhost|SELECT|G
+|root||root|localhost|SENSITIVE_VARIABLES_OBSERVER|G
+|root||root|localhost|SERVICE_CONNECTION_ADMIN|G
+|root||mysql.session|localhost|SESSION_VARIABLES_ADMIN|G
+|root||root|localhost|SESSION_VARIABLES_ADMIN|G
+|root||root|localhost|SET_USER_ID|G
+|root||root|localhost|SHOW DATABASES|G
+|root||root|localhost|SHOW VIEW|G
+|root||root|localhost|SHOW_ROUTINE|G
+|root||mysql.session|localhost|SHUTDOWN|G
+|root||root|localhost|SHUTDOWN|G
+|root||mysql.session|localhost|SUPER|G
+|root||root|localhost|SUPER|G
+|root||mysql.infoschema|localhost|SYSTEM_USER|G
+|root||mysql.session|localhost|SYSTEM_USER|G
+|root||mysql.sys|localhost|SYSTEM_USER|G
+|root||root|localhost|SYSTEM_USER|G
+|root||mysql.session|localhost|SYSTEM_VARIABLES_ADMIN|G
+|root||root|localhost|SYSTEM_VARIABLES_ADMIN|G
+|root||root|localhost|TABLE_ENCRYPTION_ADMIN|G
+|root||root|localhost|TELEMETRY_LOG_ADMIN|G
+|root||root|localhost|TRIGGER|G
+|root||root|localhost|UPDATE|G
+|root||root|localhost|XA_RECOVER_ADMIN|G
+|root||root|localhost|grant option|G
+performance_schema|schema||mysql.session|localhost|SELECT|G
+sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <ServerVersion>8.0.35</ServerVersion>
     </root>
     <collation id="2" parent="1" name="armscii8_bin">
@@ -905,258 +994,417 @@
     <collation id="287" parent="1" name="utf8mb4_zh_0900_as_cs">
       <Charset>utf8mb4</Charset>
     </collation>
-    <schema id="288" parent="1" name="barberia_db">
+    <schema id="288" parent="1" name="actividad_1">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="289" parent="1" name="biblioteca">
+    <schema id="289" parent="1" name="barberia_db">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="290" parent="1" name="biblioteca">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2025-03-17.14:53:53</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-03-18.15:15:35</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="290" parent="1" name="foro">
+    <schema id="291" parent="1" name="foro">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="291" parent="1" name="forohub">
+    <schema id="292" parent="1" name="forohub">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="292" parent="1" name="gestor_de_tarea">
+    <schema id="293" parent="1" name="gestor_de_tarea">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="293" parent="1" name="holamundo">
+    <schema id="294" parent="1" name="holamundo">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="294" parent="1" name="information_schema">
+    <schema id="295" parent="1" name="information_schema">
       <CollationName>utf8mb3_general_ci</CollationName>
     </schema>
-    <schema id="295" parent="1" name="jugos_ventas">
+    <schema id="296" parent="1" name="jugos_ventas">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="296" parent="1" name="literalura">
+    <schema id="297" parent="1" name="literalura">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="297" parent="1" name="mysql">
+    <schema id="298" parent="1" name="mysql">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="298" parent="1" name="performance_schema">
+    <schema id="299" parent="1" name="performance_schema">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="299" parent="1" name="reservations">
+    <schema id="300" parent="1" name="reservations">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="300" parent="1" name="sys">
+    <schema id="301" parent="1" name="sys">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="301" parent="1" name="ventas_jugo">
+    <schema id="302" parent="1" name="ventas_jugo">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <schema id="302" parent="1" name="vollmedapi">
+    <schema id="303" parent="1" name="vollmedapi">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
-    <user id="303" parent="1" name="mysql.infoschema">
+    <user id="304" parent="1" name="mysql.infoschema">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="304" parent="1" name="mysql.session">
+    <user id="305" parent="1" name="mysql.session">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="305" parent="1" name="mysql.sys">
+    <user id="306" parent="1" name="mysql.sys">
       <CanLogin>0</CanLogin>
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <user id="306" parent="1" name="root">
+    <user id="307" parent="1" name="root">
       <Host>localhost</Host>
       <Plugin>caching_sha2_password</Plugin>
     </user>
-    <table id="307" parent="289" name="categorias">
+    <table id="308" parent="290" name="comentarios">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="308" parent="289" name="notificaciones">
+    <table id="309" parent="290" name="libros">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="309" parent="289" name="tokens">
+    <table id="310" parent="290" name="multas">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="310" parent="289" name="usuarios">
+    <table id="311" parent="290" name="prestamos">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="311" parent="307" name="id_categoria">
+    <table id="312" parent="290" name="reservas">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="313" parent="290" name="usuarios">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <column id="314" parent="308" name="id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="312" parent="307" name="nombre">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>varchar(100)|0s</StoredType>
-    </column>
-    <index id="313" parent="307" name="PRIMARY">
-      <ColNames>id_categoria</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="314" parent="307" name="nombre">
-      <ColNames>nombre</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <key id="315" parent="307" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <key id="316" parent="307" name="nombre">
-      <UnderlyingIndexName>nombre</UnderlyingIndexName>
-    </key>
-    <column id="317" parent="308" name="id_notificacion">
-      <AutoIncrement>1</AutoIncrement>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>int|0s</StoredType>
-    </column>
-    <column id="318" parent="308" name="id_usuario">
-      <NotNull>1</NotNull>
+    <column id="315" parent="308" name="usuario_id">
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="319" parent="308" name="mensaje">
-      <NotNull>1</NotNull>
+    <column id="316" parent="308" name="libro_id">
       <Position>3</Position>
-      <StoredType>text|0s</StoredType>
+      <StoredType>int|0s</StoredType>
     </column>
-    <column id="320" parent="308" name="tipo">
+    <column id="317" parent="308" name="comentario">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StoredType>enum(&apos;novedad&apos;, &apos;recomendacion&apos;, &apos;alerta&apos;)|0e</StoredType>
+      <StoredType>text|0s</StoredType>
     </column>
-    <column id="321" parent="308" name="fecha_envio">
+    <column id="318" parent="308" name="fecha_comentario">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>5</Position>
       <StoredType>timestamp|0s</StoredType>
     </column>
-    <column id="322" parent="308" name="leido">
-      <DefaultExpression>0</DefaultExpression>
-      <Position>6</Position>
-      <StoredType>tinyint(1)|0s</StoredType>
-    </column>
-    <foreign-key id="323" parent="308" name="notificaciones_ibfk_1">
-      <ColNames>id_usuario</ColNames>
+    <foreign-key id="319" parent="308" name="comentarios_ibfk_1">
+      <ColNames>usuario_id</ColNames>
       <OnDelete>cascade</OnDelete>
-      <RefColNames>id_usuario</RefColNames>
+      <RefColNames>id</RefColNames>
       <RefTableName>usuarios</RefTableName>
     </foreign-key>
-    <index id="324" parent="308" name="PRIMARY">
-      <ColNames>id_notificacion</ColNames>
+    <foreign-key id="320" parent="308" name="comentarios_ibfk_2">
+      <ColNames>libro_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>libros</RefTableName>
+    </foreign-key>
+    <index id="321" parent="308" name="PRIMARY">
+      <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="325" parent="308" name="id_usuario">
-      <ColNames>id_usuario</ColNames>
+    <index id="322" parent="308" name="usuario_id">
+      <ColNames>usuario_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="326" parent="308" name="PRIMARY">
+    <index id="323" parent="308" name="libro_id">
+      <ColNames>libro_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="324" parent="308" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="327" parent="309" name="id_token">
+    <column id="325" parent="309" name="id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="328" parent="309" name="id_usuario">
+    <column id="326" parent="309" name="titulo">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StoredType>int|0s</StoredType>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="329" parent="309" name="token">
+    <column id="327" parent="309" name="autor">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StoredType>varchar(500)|0s</StoredType>
+      <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="330" parent="309" name="expiracion">
+    <column id="328" parent="309" name="isbn">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StoredType>datetime|0s</StoredType>
+      <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <foreign-key id="331" parent="309" name="tokens_ibfk_1">
-      <ColNames>id_usuario</ColNames>
-      <OnDelete>cascade</OnDelete>
-      <RefColNames>id_usuario</RefColNames>
-      <RefTableName>usuarios</RefTableName>
-    </foreign-key>
+    <column id="329" parent="309" name="categoria">
+      <Position>5</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="330" parent="309" name="stock">
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="331" parent="309" name="estado">
+      <DefaultExpression>&apos;disponible&apos;</DefaultExpression>
+      <Position>7</Position>
+      <StoredType>enum(&apos;disponible&apos;, &apos;prestado&apos;, &apos;reservado&apos;)|0e</StoredType>
+    </column>
     <index id="332" parent="309" name="PRIMARY">
-      <ColNames>id_token</ColNames>
+      <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="333" parent="309" name="id_usuario">
-      <ColNames>id_usuario</ColNames>
+    <index id="333" parent="309" name="isbn">
+      <ColNames>isbn</ColNames>
       <Type>btree</Type>
+      <Unique>1</Unique>
     </index>
     <key id="334" parent="309" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="335" parent="310" name="id_usuario">
+    <key id="335" parent="309" name="isbn">
+      <UnderlyingIndexName>isbn</UnderlyingIndexName>
+    </key>
+    <column id="336" parent="310" name="id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="336" parent="310" name="nombre">
-      <NotNull>1</NotNull>
+    <column id="337" parent="310" name="usuario_id">
       <Position>2</Position>
-      <StoredType>varchar(100)|0s</StoredType>
+      <StoredType>int|0s</StoredType>
     </column>
-    <column id="337" parent="310" name="correo">
+    <column id="338" parent="310" name="monto">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StoredType>varchar(150)|0s</StoredType>
+      <StoredType>decimal(10,2 digit)|0s</StoredType>
     </column>
-    <column id="338" parent="310" name="contraseña">
+    <column id="339" parent="310" name="motivo">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StoredType>varchar(255)|0s</StoredType>
+      <StoredType>text|0s</StoredType>
     </column>
-    <column id="339" parent="310" name="rol">
-      <DefaultExpression>&apos;lector&apos;</DefaultExpression>
-      <NotNull>1</NotNull>
+    <column id="340" parent="310" name="estado">
+      <DefaultExpression>&apos;pendiente&apos;</DefaultExpression>
       <Position>5</Position>
-      <StoredType>enum(&apos;lector&apos;, &apos;admin&apos;)|0e</StoredType>
+      <StoredType>enum(&apos;pendiente&apos;, &apos;pagada&apos;)|0e</StoredType>
     </column>
-    <column id="340" parent="310" name="fecha_registro">
+    <column id="341" parent="310" name="fecha_generada">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>6</Position>
       <StoredType>timestamp|0s</StoredType>
     </column>
-    <index id="341" parent="310" name="PRIMARY">
-      <ColNames>id_usuario</ColNames>
+    <foreign-key id="342" parent="310" name="multas_ibfk_1">
+      <ColNames>usuario_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usuarios</RefTableName>
+    </foreign-key>
+    <index id="343" parent="310" name="PRIMARY">
+      <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="342" parent="310" name="correo">
-      <ColNames>correo</ColNames>
+    <index id="344" parent="310" name="usuario_id">
+      <ColNames>usuario_id</ColNames>
       <Type>btree</Type>
-      <Unique>1</Unique>
     </index>
-    <key id="343" parent="310" name="PRIMARY">
+    <key id="345" parent="310" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="344" parent="310" name="correo">
-      <UnderlyingIndexName>correo</UnderlyingIndexName>
+    <column id="346" parent="311" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="347" parent="311" name="usuario_id">
+      <Position>2</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="348" parent="311" name="libro_id">
+      <Position>3</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="349" parent="311" name="fecha_prestamo">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="350" parent="311" name="fecha_devolucion">
+      <Position>5</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="351" parent="311" name="estado">
+      <DefaultExpression>&apos;activo&apos;</DefaultExpression>
+      <Position>6</Position>
+      <StoredType>enum(&apos;activo&apos;, &apos;devuelto&apos;, &apos;vencido&apos;)|0e</StoredType>
+    </column>
+    <foreign-key id="352" parent="311" name="prestamos_ibfk_1">
+      <ColNames>usuario_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usuarios</RefTableName>
+    </foreign-key>
+    <foreign-key id="353" parent="311" name="prestamos_ibfk_2">
+      <ColNames>libro_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>libros</RefTableName>
+    </foreign-key>
+    <index id="354" parent="311" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="355" parent="311" name="usuario_id">
+      <ColNames>usuario_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="356" parent="311" name="libro_id">
+      <ColNames>libro_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="357" parent="311" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="358" parent="312" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="359" parent="312" name="usuario_id">
+      <Position>2</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="360" parent="312" name="libro_id">
+      <Position>3</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="361" parent="312" name="fecha_reserva">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <Position>4</Position>
+      <StoredType>timestamp|0s</StoredType>
+    </column>
+    <column id="362" parent="312" name="estado">
+      <DefaultExpression>&apos;pendiente&apos;</DefaultExpression>
+      <Position>5</Position>
+      <StoredType>enum(&apos;pendiente&apos;, &apos;confirmada&apos;, &apos;cancelada&apos;)|0e</StoredType>
+    </column>
+    <foreign-key id="363" parent="312" name="reservas_ibfk_1">
+      <ColNames>usuario_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>usuarios</RefTableName>
+    </foreign-key>
+    <foreign-key id="364" parent="312" name="reservas_ibfk_2">
+      <ColNames>libro_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>libros</RefTableName>
+    </foreign-key>
+    <index id="365" parent="312" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="366" parent="312" name="usuario_id">
+      <ColNames>usuario_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="367" parent="312" name="libro_id">
+      <ColNames>libro_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="368" parent="312" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="369" parent="313" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="370" parent="313" name="nombre">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="371" parent="313" name="email">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="372" parent="313" name="contraseña">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="373" parent="313" name="rol">
+      <DefaultExpression>&apos;usuario&apos;</DefaultExpression>
+      <Position>5</Position>
+      <StoredType>enum(&apos;usuario&apos;, &apos;admin&apos;)|0e</StoredType>
+    </column>
+    <column id="374" parent="313" name="fecha_registro">
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <Position>6</Position>
+      <StoredType>timestamp|0s</StoredType>
+    </column>
+    <index id="375" parent="313" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="376" parent="313" name="email">
+      <ColNames>email</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="377" parent="313" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="378" parent="313" name="email">
+      <UnderlyingIndexName>email</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>
