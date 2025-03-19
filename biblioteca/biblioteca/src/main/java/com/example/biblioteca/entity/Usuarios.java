@@ -15,7 +15,7 @@ import java.sql.Timestamp;
 public class Usuarios {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_usuario;
+    private Long id;
 
     @Column(nullable = false)
     private String nombre;
@@ -32,8 +32,8 @@ public class Usuarios {
     @Column(nullable = false)
     private Timestamp fecha_registro ;
 
-    public void setId_usuario(Long id_usuario) {
-        this.id_usuario = id_usuario;
+    public void setId(Long id_usuario) {
+        this.id = id_usuario;
     }
 
     public String getPassword() {

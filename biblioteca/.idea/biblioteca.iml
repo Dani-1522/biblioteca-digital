@@ -10,7 +10,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="biblioteca" value="2739de3d-6887-47cd-9e6a-91864c882c70" />
-          <factory-entry name="entityManagerFactory" value="2739de3d-6887-47cd-9e6a-91864c882c70" />
+          <factory-entry name="entityManagerFactory" value="0fcf6c30-c3eb-4966-af55-69fb46d32c80" />
         </datasource-mapping>
         <naming-strategy-map>
           <unit-entry name="entityManagerFactory" />

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendaciones de Libros</title>
+    <link rel="stylesheet" href="/css/recomendacion.css">
+    <script defer src="recomendaciones.js"></script>
+</head>
+<body>
+    <h1>Recomendaciones de Libros</h1>
+
+    <h2>Libros Populares</h2>
+    <ul id="librosPopulares"></ul>
+
+    <h2>Deja una Reseña</h2>
+    <select id="libroSelect"></select>
+    <textarea id="resena" placeholder="Escribe tu reseña"></textarea>
+    <input type="number" id="calificacion" min="1" max="5" placeholder="Calificación (1-5)">
+    <button onclick="guardarReseña()">Enviar</button>
+
+    <h2>Reseñas</h2>
+    <ul id="listaReseñas"></ul>
+</body>
+</html>

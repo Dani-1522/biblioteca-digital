@@ -3,8 +3,6 @@ package com.example.biblioteca.controllers;
 import com.example.biblioteca.entity.Usuarios;
 import com.example.biblioteca.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,7 +25,7 @@ public class UsuarioController {
     public Usuarios actualizarUsuario(@PathVariable Long id, @RequestBody Usuarios usuario) {
         Optional<Usuarios> usuarioExistente = usuarioService.obtenerPorId(id);
         if (usuarioExistente.isPresent()) {
-            usuario.setId_usuario(id);
+            usuario.setId(id);
             return usuarioService.guardarUsuario(usuario);
         } else {
             throw new RuntimeException("Usuario no encontrado");

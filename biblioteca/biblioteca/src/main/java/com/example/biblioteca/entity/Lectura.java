@@ -6,31 +6,25 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "libros")
 @Data
+@Table(name = "lecturas")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Libros {
+public class Lectura {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String titulo;
-    private String autor;
-    private String isbn;
-    private String categoria;
-    private String stok;
 
-    @Enumerated(EnumType.STRING)
-    private Estado estado;
+    @ManyToOne
+    @JoinColumn(name = "usuaio_id", nullable = false)
+    private Usuarios usuario;
+    @ManyToOne
+    @JoinColumn(name = "libro_id", nullable = false )
+    private Libros libro;
+    private String marcadores;
 
-    private String urlArchivo;
     public void setId(Long id) {
         this.id = id;
     }
-
-    public Long getId() {
-        return id;
-    }
-
 }

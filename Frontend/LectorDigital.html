@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector Digital</title>
+    <link rel="stylesheet" href="/css/lectura.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/epub.js/0.3.88/epub.min.js"></script>
+    <script defer src="/js/lectura.js"></script>
+</head>
+<body>
+    <h1>Lector de Libros</h1>
+
+    <div class="configuracion">
+        <label for="fuente">Tamaño de fuente:</label>
+        <input type="range" id="fuente" min="12" max="32" value="16" oninput="cambiarFuente(this.value)">
+        
+        <button onclick="toggleModoOscuro()">Modo Oscuro</button>
+    </div>
+
+    <div id="lector" contenteditable="true">
+        <p id="contenido">Selecciona un libro para empezar a leer.</p>
+    </div>
+    
+    <input type="file" id="archivo" accept=".pdf,.epub">
+    <button onclick="subirArchivo()">Subir Libro</button>
+   
+    <div id="visor">
+        <iframe id="visorPDF" width="100%" height="600px"></iframe>
+        <div id="visorEPUB"></div>
+    </div>
+    
+    <button onclick="guardarProgreso()">Guardar Progreso</button>
+</body>
+</html>

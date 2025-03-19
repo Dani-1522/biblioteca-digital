@@ -8,7 +8,7 @@ document.getElementById("usuarioForm").addEventListener("submit", function(event
         rol: document.getElementById("rol").value
     };
 
-    fetch("http://localhost:8080/api/usuarios", {
+    fetch("http://localhost:8080/usuarios", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(usuario)
@@ -21,7 +21,7 @@ document.getElementById("usuarioForm").addEventListener("submit", function(event
 });
 
 function obtenerUsuarios() {
-    fetch("http://localhost:8080/api/usuarios")
+    fetch("http://localhost:8080/usuarios")
     .then(response => response.json())
     .then(data => {
         let lista = document.getElementById("listaUsuarios");
