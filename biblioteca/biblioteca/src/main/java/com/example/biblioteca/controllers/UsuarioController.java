@@ -43,7 +43,7 @@ public class UsuarioController {
     }
 
     @GetMapping("/buscar/correo/{correo}")
-    public Optional<Usuarios> buscarPorCorreo(@PathVariable String correo) {
+    public Usuarios buscarPorCorreo(@PathVariable String correo) {
         return usuarioService.buscarPorCorreo(correo);
     }
 

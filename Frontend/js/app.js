@@ -1,28 +1,59 @@
-document.getElementById("formLibro").addEventListener("submit", async function(event) {
-    event.preventDefault();
-
-    const libro = {
-        titulo: document.getElementById("titulo").value,
-        autor: document.getElementById("autor").value,
-        isbn: document.getElementById("isbn").value,
-        fechaPublicacion: document.getElementById("fechaPublicacion").value,
-        genero: document.getElementById("genero").value
-    };
-
-    console.log("Enviando libro:", libro); // Verifica en la consola
-
-    try {
-        const response = await fetch("http://localhost:3000/api/libros", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(libro)
-        });
-
-        const data = await response.json();
-        console.log("Respuesta del servidor:", data);
-        document.getElementById("mensaje").textContent = data.mensaje;
-    } catch (error) {
-        console.error("Error:", error);
-        document.getElementById("mensaje").textContent = "Error al registrar el libro";
+function mostrarMensaje(id, mensaje, tipo) {
+    const elemento = document.getElementById(id);
+    if (elemento) {
+        elemento.innerText = mensaje;
+        elemento.style.color = tipo === "error" ? "red" : "green";
     }
+}
+
+// Registrar usuario con validación
+document.getElementById("registerForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    
+    const username = document.getElementById("registerUsername").value;
+    const password = document.getElementById("registerPassword").value;
+
+    if (username.length < 4 || password.length < 6) {
+        mostrarMensaje("registerError", "Usuario o contraseña demasiado cortos", "error");
+        return;
+    }
+
+    fetch("http://localhost:8080/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            mostrarMensaje("registerError", "Usuario registrado con éxito", "success");
+        } else {
+            mostrarMensaje("registerError", data.message || "Error al registrar", "error");
+        }
+    })
+    .catch(() => mostrarMensaje("registerError", "Error al conectar con el servidor", "error"));
+});
+
+// Inicio de sesión con validación
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById("loginUsername").value;
+    const password = document.getElementById("loginPassword").value;
+
+    fetch("http://localhost:8080/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.token) {
+            localStorage.setItem("token", data.token);
+            mostrarMensaje("loginError", "Inicio de sesión exitoso", "success");
+        } else {
+            mostrarMensaje("loginError", "Credenciales incorrectas", "error");
+        }
+    })
+    .catch(() => mostrarMensaje("loginError", "Error al conectar con el servidor", "error"));
 });

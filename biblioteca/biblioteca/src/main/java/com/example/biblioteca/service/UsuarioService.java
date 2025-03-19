@@ -3,6 +3,8 @@ package com.example.biblioteca.service;
 import com.example.biblioteca.entity.Usuarios;
 import com.example.biblioteca.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,6 +26,7 @@ public class UsuarioService {
     }
 
     public Usuarios guardarUsuario(Usuarios usuario) {
+        usuario.setPassword(new BCryptPasswordEncoder().encode(usuario.getPassword()));
         return usuarioRepository.save(usuario);
     }
 
@@ -35,8 +38,8 @@ public class UsuarioService {
         return usuarioRepository.findByNombreContainingIgnoreCase(nombre);
     }
 
-    public Optional<Usuarios> buscarPorCorreo(String correo) {
-        return usuarioRepository.findByEmail(correo);
+    public Usuarios buscarPorCorreo(String correo) {
+        return usuarioRepository.findByEmail(correo).orElse(null);
     }
 
     public String recuperarContraseña(String correo) {
